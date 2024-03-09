@@ -30,10 +30,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./public/walkthru.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with LICEcap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -42,6 +42,12 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+During the development progress, I notice that, when I click the next button, the flashcard is not going back to front page. I was having a hard
+time trying to figure out the solution, because I treat FlashCard as a component embedded in the main page. When the button is clicked, I cannot 
+do anything to the states of inner Flashcard component. But then, by scanning through the documentations, I find out that, I could actually create
+states within main page, and pass the setter function to Flashcards instead of creating states in Flashcard, by doing so, I am able to set the flipped
+state outside and inside the flashcard!
 
 ## License
 
