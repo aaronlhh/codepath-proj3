@@ -1,6 +1,6 @@
 import './App.css'
 import Container from '../components/Container'
-
+import {React, useState} from 'react'
 
 function App() {
     const cards = [
@@ -61,6 +61,9 @@ function App() {
         },
     ]
 
+    const [currStreak, setcurrStreak] = useState(0);
+    const [longestStreak, setLongestStreak] = useState(0)
+
     return (
         <>
             <div className='App'>
@@ -68,9 +71,12 @@ function App() {
                     <h2>The Ultimate Plant Parent!</h2>
                     <h4>How good of a plant parent are you? Test all of your planty knowledge here!</h4>
                     <h5>Number of cards: {cards.length-1}</h5>
+                    <h5>Current Streak: {currStreak}, Longest Streak: {longestStreak}</h5>
                 </div>
                 <br />
-                <Container cards={cards} />
+                <Container cards={cards} 
+                            setcurrStreak = {setcurrStreak}
+                            setLongestStreak = {setLongestStreak}/>
             </div>
         </>
     )

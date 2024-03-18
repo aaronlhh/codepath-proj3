@@ -1,26 +1,26 @@
-# Web Development Project 2 - *Name of App Here*
+# Web Development Project 3 - *Name of App Here*
 
-Submitted by: **Honghao Lin**
+Submitted by: **Your Name Here**
 
-This web app: **Flashcards**
+This web app: **insert description**
 
-Time spent: **12** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [x] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [ ] A shuffle button is used to randomize the order of the cards
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [x] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -28,12 +28,12 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
 <img src='./public/walkthru.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with LICEcap  
+GIF created with Licecap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -42,12 +42,11 @@ GIF created with LICEcap
 ## Notes
 
 Describe any challenges encountered while building the app.
-
-During the development progress, I notice that, when I click the next button, the flashcard is not going back to front page. I was having a hard
-time trying to figure out the solution, because I treat FlashCard as a component embedded in the main page. When the button is clicked, I cannot 
-do anything to the states of inner Flashcard component. But then, by scanning through the documentations, I find out that, I could actually create
-states within main page, and pass the setter function to Flashcards instead of creating states in Flashcard, by doing so, I am able to set the flipped
-state outside and inside the flashcard!
+I was facing the challenges with how to deal with the streaks features. Because the streaks are supposed to be 
+displayed on the main page, but the functionality of the guessing answer parts are embedded within the 
+container component. But by diving into documentations and practical examples of react, I notice that I can
+create states on App page, but passing the setter into the Container component in order to set the streaks as 
+we make guess to the answers.
 
 ## License
 
