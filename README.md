@@ -1,10 +1,10 @@
 # Web Development Project 3 - *Name of App Here*
 
-Submitted by: **Your Name Here**
+Submitted by: **Honghao Lin**
 
-This web app: **insert description**
+This web app: **FlashCard**
 
-Time spent: **X** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
